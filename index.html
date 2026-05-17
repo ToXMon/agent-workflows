@@ -2,129 +2,162 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Tolu's interactive Agent Gallery at toxmon.github.io/agent-workflows — a high-motion portfolio for agentic systems, blockchain, and full-stack engineering."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tolu's interactive Agent Gallery — a high-motion portfolio for agentic systems, blockchain, and full-stack engineering.">
     <title>Tolu — Agent Gallery</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Particle canvas background -->
     <canvas id="nebula" aria-hidden="true"></canvas>
 
-    <header class="site-header blur-card" aria-label="Primary">
-      <a class="brand" href="#home">Tolu / Agent Gallery</a>
+    <!-- Noise texture overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Floating navigation -->
+    <header class="site-header" id="siteHeader" aria-label="Primary navigation">
+      <a class="brand" href="#home">Tolu<span class="brand-dot">.</span></a>
       <nav>
-        <a href="#gallery">Gallery</a>
-        <a href="#lab">Live Lab</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
+        <a href="#gallery" data-nav>Gallery</a>
+        <a href="#lab" data-nav>Live Lab</a>
+        <a href="#stack" data-nav>Stack</a>
+        <a href="#contact" data-nav>Contact</a>
       </nav>
     </header>
 
     <main id="home">
-      <section class="hero section reveal">
-        <div class="hero-copy">
-          <p class="eyebrow">Interactive Agent Gallery • toxmon.github.io/agent-workflows</p>
-          <h1>
-            Cracked full-stack systems for <span>agentic workflows</span>,
-            <span>blockchain</span>, and <span>shipping fast</span>.
+      <!-- ═══ HERO SECTION ═══ -->
+      <section class="hero section" id="heroSection">
+        <div class="hero-orb" aria-hidden="true">
+          <div class="orb-core"></div>
+          <div class="orb-ring orb-ring-1"></div>
+          <div class="orb-ring orb-ring-2"></div>
+          <div class="orb-ring orb-ring-3"></div>
+        </div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Interactive Agent Gallery</p>
+          <h1 class="hero-title">
+            <span class="line" data-text="Cracked full-stack">Cracked full-stack</span><br>
+            <span class="line highlight" data-text="systems for">systems for</span><br>
+            <span class="line" data-text="agentic workflows.">agentic workflows<span class="cursor" aria-hidden="true">_</span></span>
           </h1>
           <p class="lead">
-            Tolu builds and ships agents, tooling, and interfaces that turn messy work into
-            clean systems. This gallery shows the work, the architecture, and the thinking.
+            Tolu builds and ships agents, tooling, and interfaces that turn messy work into clean systems. This gallery shows the work, the architecture, and the thinking.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#gallery">Enter the Gallery</a>
-            <a class="btn btn-ghost" href="#lab">Open the Live Lab</a>
+            <a class="btn btn-primary magnetic" href="#gallery" data-strength="20">
+              <span>Enter the Gallery</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="#lab" data-strength="15">
+              <span>Open the Live Lab</span>
+            </a>
           </div>
         </div>
-
-        <aside class="hero-panel blur-card">
+        <aside class="hero-panel glass-card reveal" data-delay="200">
           <p class="panel-kicker">Positioning</p>
           <h2>Full-stack developer for agentic systems</h2>
           <ul class="signal-list">
-            <li>20+ Agent Zero skills</li>
-            <li>Agentic and Web3 builds</li>
-            <li>Interactive, motion-rich UI</li>
-            <li>Built to win attention fast</li>
+            <li><span class="signal-dot"></span>20+ Agent Zero skills</li>
+            <li><span class="signal-dot"></span>Agentic and Web3 builds</li>
+            <li><span class="signal-dot"></span>Interactive, motion-rich UI</li>
+            <li><span class="signal-dot"></span>Built to win attention fast</li>
           </ul>
         </aside>
       </section>
 
-      <section id="gallery" class="section reveal">
-        <div class="section-head">
-          <p class="eyebrow">Flagship exhibits</p>
-          <h2 class="section-title">Agent Gallery</h2>
-          <p class="lead-small">
-            Five flagship skills, grouped into one interactive exhibition with 3D motion,
-            architecture cards, and preloaded JSON demos.
-          </p>
+      <!-- ═══ GALLERY SECTION ═══ -->
+      <section id="gallery" class="section">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Flagship exhibits</p>
+            <h2 class="section-title">Agent Gallery</h2>
+          </div>
+          <p class="lead-small">Five flagship skills, grouped into one interactive exhibition with 3D motion, architecture cards, and preloaded JSON demos.</p>
         </div>
 
         <div class="gallery-grid">
-          <article class="blur-card exhibit-card featured">
+          <article class="glass-card exhibit-card tilt-card reveal" data-delay="0">
+            <div class="exhibit-glow" aria-hidden="true"></div>
             <div class="exhibit-meta">
               <span class="pill">01</span>
-              <span class="pill">Live JSON</span>
+              <span class="pill pill-live">Live JSON</span>
             </div>
             <h3>Crypto Scanner</h3>
             <p>Autonomous DeFi scanning system for signals, edges, and fast decisions.</p>
-            <button class="demo-toggle" data-demo="crypto">Inspect exhibit</button>
+            <button class="demo-toggle magnetic" data-demo="crypto" data-strength="10">
+              <span>Inspect exhibit</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </article>
 
-          <article class="blur-card exhibit-card featured">
+          <article class="glass-card exhibit-card tilt-card featured-card reveal" data-delay="100">
+            <div class="exhibit-glow" aria-hidden="true"></div>
             <div class="exhibit-meta">
               <span class="pill">02</span>
-              <span class="pill">Live JSON</span>
+              <span class="pill pill-live">Live JSON</span>
             </div>
             <h3>X Monitor</h3>
             <p>Signal extraction and social monitoring for trend, narrative, and alpha.</p>
-            <button class="demo-toggle" data-demo="xmonitor">Inspect exhibit</button>
+            <button class="demo-toggle magnetic" data-demo="xmonitor" data-strength="10">
+              <span>Inspect exhibit</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </article>
 
-          <article class="blur-card exhibit-card featured">
+          <article class="glass-card exhibit-card tilt-card reveal" data-delay="200">
+            <div class="exhibit-glow" aria-hidden="true"></div>
             <div class="exhibit-meta">
               <span class="pill">03</span>
               <span class="pill">Architecture</span>
             </div>
             <h3>AgentTrust</h3>
             <p>Trust infrastructure and wallet-native patterns for agent coordination.</p>
-            <button class="demo-toggle" data-demo="agenttrust">Inspect exhibit</button>
+            <button class="demo-toggle magnetic" data-demo="agenttrust" data-strength="10">
+              <span>Inspect exhibit</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </article>
 
-          <article class="blur-card exhibit-card featured">
+          <article class="glass-card exhibit-card tilt-card featured-card reveal" data-delay="300">
+            <div class="exhibit-glow" aria-hidden="true"></div>
             <div class="exhibit-meta">
               <span class="pill">04</span>
-              <span class="pill">Live JSON</span>
+              <span class="pill pill-live">Live JSON</span>
             </div>
             <h3>Memory Palace</h3>
-            <p>Knowledge systems that preserve context, recall, and durable output.
-            </p>
-            <button class="demo-toggle" data-demo="memory">Inspect exhibit</button>
+            <p>Knowledge systems that preserve context, recall, and durable output.</p>
+            <button class="demo-toggle magnetic" data-demo="memory" data-strength="10">
+              <span>Inspect exhibit</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </article>
 
-          <article class="blur-card exhibit-card featured">
+          <article class="glass-card exhibit-card tilt-card reveal" data-delay="400">
+            <div class="exhibit-glow" aria-hidden="true"></div>
             <div class="exhibit-meta">
               <span class="pill">05</span>
               <span class="pill">Tooling</span>
             </div>
             <h3>Agent Skills</h3>
             <p>Twenty-plus skills turned into reusable shipping leverage for real workflows.</p>
-            <button class="demo-toggle" data-demo="skills">Inspect exhibit</button>
+            <button class="demo-toggle magnetic" data-demo="skills" data-strength="10">
+              <span>Inspect exhibit</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </article>
         </div>
       </section>
 
-      <section id="lab" class="section reveal">
-        <div class="lab-shell blur-card">
+      <!-- ═══ LIVE LAB SECTION ═══ -->
+      <section id="lab" class="section">
+        <div class="lab-shell glass-card reveal">
           <div class="lab-top">
             <div>
               <p class="eyebrow">Live lab</p>
@@ -147,36 +180,52 @@
         </div>
       </section>
 
-      <section id="stack" class="section reveal">
-        <p class="eyebrow">Stack</p>
-        <h2 class="section-title">What powers the gallery</h2>
+      <!-- ═══ STACK SECTION ═══ -->
+      <section id="stack" class="section">
+        <div class="reveal">
+          <p class="eyebrow">Stack</p>
+          <h2 class="section-title">What powers the gallery</h2>
+        </div>
         <div class="stack-grid">
-          <article class="blur-card stack-card">
+          <article class="glass-card stack-card tilt-card reveal" data-delay="0">
+            <div class="stack-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="4 4"/><circle cx="16" cy="16" r="6" fill="var(--cyan)" opacity="0.3"/></svg>
+            </div>
             <h3>Motion first</h3>
             <p>Scroll-driven reveals, floating layers, and lightweight canvas animation.</p>
           </article>
-          <article class="blur-card stack-card">
+          <article class="glass-card stack-card tilt-card reveal" data-delay="100">
+            <div class="stack-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="4" stroke="var(--violet)" stroke-width="2"/><path d="M12 16h8M16 12v8" stroke="var(--violet)" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
             <h3>Simple runtime</h3>
             <p>Plain HTML, CSS, and JavaScript for fast load and easy deploy.</p>
           </article>
-          <article class="blur-card stack-card">
+          <article class="glass-card stack-card tilt-card reveal" data-delay="200">
+            <div class="stack-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L16 8l8 16" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="20" r="3" fill="var(--violet)" opacity="0.5"/></svg>
+            </div>
             <h3>Data-backed</h3>
             <p>Pre-recorded JSON for each exhibit so the site always has something to show.</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="section reveal">
-        <div class="blur-card contact-card">
+      <!-- ═══ CONTACT SECTION ═══ -->
+      <section id="contact" class="section">
+        <div class="glass-card contact-card reveal">
           <p class="eyebrow">Contact</p>
           <h2 class="section-title">Built to open doors</h2>
-          <p>
-            Want the repo, the exhibit system, or the architecture behind it? Reach out and
-            I’ll send the build notes.
-          </p>
+          <p>Want the repo, the exhibit system, or the architecture behind it? Reach out and I'll send the build notes.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="mailto:tolu@example.com">Email Tolu</a>
-            <a class="btn btn-ghost" href="https://github.com/ToXMon" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-primary magnetic" href="mailto:tolu@example.com" data-strength="20">
+              <span>Email Tolu</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4l6 5 6-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="3" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="https://github.com/ToXMon" target="_blank" rel="noreferrer" data-strength="15">
+              <span>GitHub</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1a7 7 0 00-2.21 13.64c.35.06.48-.15.48-.34v-1.2c-1.96.43-2.37-.95-2.37-.95-.32-.81-.78-1.03-.78-1.03-.64-.44.05-.43.05-.43.71.05 1.08.73 1.08.73.63 1.08 1.65.77 2.05.59.06-.46.25-.77.45-.95-1.56-.18-3.2-.78-3.2-3.48 0-.77.27-1.4.73-1.89-.07-.18-.32-.9.07-1.87 0 0 .6-.19 1.95.72a6.76 6.76 0 013.56 0c1.35-.91 1.95-.72 1.95-.72.39.97.14 1.69.07 1.87.46.49.73 1.12.73 1.89 0 2.71-1.65 3.3-3.22 3.47.25.22.48.65.48 1.31v1.94c0 .19.13.41.48.34A7 7 0 008 1z" fill="currentColor"/></svg>
+            </a>
           </div>
         </div>
       </section>
