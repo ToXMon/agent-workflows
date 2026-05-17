@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tolu Shekoni — Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Tolu Shekoni — Materialist Scientist and Business Excellence Engineer focused on Web3, AI, and Data Science."
+      content="Tolu's interactive Agent Gallery at tolu.is-a.dev — a high-motion portfolio for agentic systems, blockchain, and full-stack engineering."
     />
+    <title>Tolu — Agent Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,122 +17,170 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas id="nebula"></canvas>
+    <canvas id="nebula" aria-hidden="true"></canvas>
 
-    <header class="site-header blur-card">
-      <a class="brand" href="#home">TS</a>
+    <header class="site-header blur-card" aria-label="Primary">
+      <a class="brand" href="#home">Tolu / Agent Gallery</a>
       <nav>
-        <a href="#about">About</a>
-        <a href="#focus">Focus</a>
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#lab">Live Lab</a>
+        <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="home">
       <section class="hero section reveal">
-        <p class="eyebrow">Materialist Scientist • Business Excellence Engineer</p>
-        <h1>
-          Tolu Shekoni builds high-leverage systems at the edge of
-          <span>Web3</span>, <span>AI</span>, and <span>Data Science</span>.
-        </h1>
-        <p class="lead">
-          I design measurable products and decision systems that move from concept to
-          production with precision, speed, and economic clarity.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#work">See Selected Work</a>
-          <a class="btn btn-ghost" href="#contact">Start a Conversation</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Interactive Agent Gallery • tolu.is-a.dev</p>
+          <h1>
+            Cracked full-stack systems for <span>agentic workflows</span>,
+            <span>blockchain</span>, and <span>shipping fast</span>.
+          </h1>
+          <p class="lead">
+            Tolu builds and ships agents, tooling, and interfaces that turn messy work into
+            clean systems. This gallery shows the work, the architecture, and the thinking.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#gallery">Enter the Gallery</a>
+            <a class="btn btn-ghost" href="#lab">Open the Live Lab</a>
+          </div>
         </div>
+
+        <aside class="hero-panel blur-card">
+          <p class="panel-kicker">Positioning</p>
+          <h2>Full-stack developer for agentic systems</h2>
+          <ul class="signal-list">
+            <li>20+ Agent Zero skills</li>
+            <li>Agentic and Web3 builds</li>
+            <li>Interactive, motion-rich UI</li>
+            <li>Built to win attention fast</li>
+          </ul>
+        </aside>
       </section>
 
-      <section id="about" class="section grid-two reveal">
-        <div class="blur-card block">
-          <h2>Operating Thesis</h2>
-          <p>
-            I approach technology as applied science: hypotheses, instrumentation,
-            feedback loops, and iteration. The goal is not novelty for novelty’s sake;
-            the goal is durable business outcomes.
+      <section id="gallery" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Flagship exhibits</p>
+          <h2 class="section-title">Agent Gallery</h2>
+          <p class="lead-small">
+            Five flagship skills, grouped into one interactive exhibition with 3D motion,
+            architecture cards, and preloaded JSON demos.
           </p>
         </div>
-        <div class="blur-card block stats">
-          <h2>Core Disciplines</h2>
-          <ul>
-            <li><strong>Business Excellence</strong><span>Process intelligence, KPI architecture, execution systems</span></li>
-            <li><strong>Web3 Engineering</strong><span>Protocol-native product design, trust-minimized workflows</span></li>
-            <li><strong>AI Systems</strong><span>Agentic workflows, automation strategy, model operations</span></li>
-            <li><strong>Data Science</strong><span>Signal extraction, forecasting, decision support pipelines</span></li>
-          </ul>
+
+        <div class="gallery-grid">
+          <article class="blur-card exhibit-card featured">
+            <div class="exhibit-meta">
+              <span class="pill">01</span>
+              <span class="pill">Live JSON</span>
+            </div>
+            <h3>Crypto Scanner</h3>
+            <p>Autonomous DeFi scanning system for signals, edges, and fast decisions.</p>
+            <button class="demo-toggle" data-demo="crypto">Inspect exhibit</button>
+          </article>
+
+          <article class="blur-card exhibit-card featured">
+            <div class="exhibit-meta">
+              <span class="pill">02</span>
+              <span class="pill">Live JSON</span>
+            </div>
+            <h3>X Monitor</h3>
+            <p>Signal extraction and social monitoring for trend, narrative, and alpha.</p>
+            <button class="demo-toggle" data-demo="xmonitor">Inspect exhibit</button>
+          </article>
+
+          <article class="blur-card exhibit-card featured">
+            <div class="exhibit-meta">
+              <span class="pill">03</span>
+              <span class="pill">Architecture</span>
+            </div>
+            <h3>AgentTrust</h3>
+            <p>Trust infrastructure and wallet-native patterns for agent coordination.</p>
+            <button class="demo-toggle" data-demo="agenttrust">Inspect exhibit</button>
+          </article>
+
+          <article class="blur-card exhibit-card featured">
+            <div class="exhibit-meta">
+              <span class="pill">04</span>
+              <span class="pill">Live JSON</span>
+            </div>
+            <h3>Memory Palace</h3>
+            <p>Knowledge systems that preserve context, recall, and durable output.
+            </p>
+            <button class="demo-toggle" data-demo="memory">Inspect exhibit</button>
+          </article>
+
+          <article class="blur-card exhibit-card featured">
+            <div class="exhibit-meta">
+              <span class="pill">05</span>
+              <span class="pill">Tooling</span>
+            </div>
+            <h3>Agent Skills</h3>
+            <p>Twenty-plus skills turned into reusable shipping leverage for real workflows.</p>
+            <button class="demo-toggle" data-demo="skills">Inspect exhibit</button>
+          </article>
         </div>
       </section>
 
-      <section id="focus" class="section reveal">
-        <h2 class="section-title">Current Focus Areas</h2>
-        <div class="cards">
-          <article class="blur-card card">
-            <h3>Web3 x AI Product Design</h3>
-            <p>Building practical onchain products with intelligent automation and clean UX.</p>
-          </article>
-          <article class="blur-card card">
-            <h3>Operational Intelligence</h3>
-            <p>Turning business operations into measurable systems with closed-loop optimization.</p>
-          </article>
-          <article class="blur-card card">
-            <h3>Data-Driven Execution</h3>
-            <p>Using high-quality metrics and causal thinking to guide product and growth bets.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="work" class="section reveal">
-        <h2 class="section-title">Selected Work Directions</h2>
-        <div class="timeline">
-          <div class="blur-card item">
-            <p class="tag">01</p>
-            <h3>Protocol-Aware Growth Systems</h3>
-            <p>Frameworks for launching and scaling decentralized products with measurable market fit.</p>
+      <section id="lab" class="section reveal">
+        <div class="lab-shell blur-card">
+          <div class="lab-top">
+            <div>
+              <p class="eyebrow">Live lab</p>
+              <h2 class="section-title">Interactive exhibit control room</h2>
+            </div>
+            <div class="lab-chip">3D out of the box</div>
           </div>
-          <div class="blur-card item">
-            <p class="tag">02</p>
-            <h3>AI-Augmented Business Engineering</h3>
-            <p>Decision and workflow engines that reduce entropy and increase execution velocity.</p>
-          </div>
-          <div class="blur-card item">
-            <p class="tag">03</p>
-            <h3>Applied Research to Production</h3>
-            <p>Moving technical insight into shipped interfaces and robust delivery pipelines.</p>
+          <div class="lab-body">
+            <div class="lab-visual" aria-hidden="true">
+              <div class="orb orb-a"></div>
+              <div class="orb orb-b"></div>
+              <div class="orb orb-c"></div>
+            </div>
+            <div class="lab-panel">
+              <p id="demo-title" class="panel-kicker">Crypto Scanner</p>
+              <h3 id="demo-subtitle">Preloaded JSON keeps the demo fast and reliable.</h3>
+              <pre id="demo-output" class="demo-output" aria-live="polite">Loading exhibit...</pre>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="section reveal">
-        <div class="projects-header">
-          <h2 class="section-title">Featured Repositories</h2>
-          <p class="lead-small">A curated showcase from <strong>wijnaldum-eth</strong>, <strong>tolu-jnj</strong>, and <strong>ToXMon</strong> across hackathons, experiments, and product builds.</p>
+      <section id="stack" class="section reveal">
+        <p class="eyebrow">Stack</p>
+        <h2 class="section-title">What powers the gallery</h2>
+        <div class="stack-grid">
+          <article class="blur-card stack-card">
+            <h3>Motion first</h3>
+            <p>Scroll-driven reveals, floating layers, and lightweight canvas animation.</p>
+          </article>
+          <article class="blur-card stack-card">
+            <h3>Simple runtime</h3>
+            <p>Plain HTML, CSS, and JavaScript for fast load and easy deploy.</p>
+          </article>
+          <article class="blur-card stack-card">
+            <h3>Data-backed</h3>
+            <p>Pre-recorded JSON for each exhibit so the site always has something to show.</p>
+          </article>
         </div>
-        <div id="project-grid" class="project-grid"></div>
-        <p id="projects-status" class="projects-status">Loading live repository metadata…</p>
       </section>
 
       <section id="contact" class="section reveal">
-        <div class="blur-card contact">
-          <h2>Let’s build something unfairly effective.</h2>
+        <div class="blur-card contact-card">
+          <p class="eyebrow">Contact</p>
+          <h2 class="section-title">Built to open doors</h2>
           <p>
-            If you’re building in Web3, AI, or data-intensive products and need rigorous
-            execution with aesthetic quality, let’s talk.
+            Want the repo, the exhibit system, or the architecture behind it? Reach out and
+            I’ll send the build notes.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="mailto:hello@tolushekoni.com">hello@tolushekoni.com</a>
-            <a class="btn btn-ghost" href="https://github.com/ToXMon" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-primary" href="mailto:tolu@example.com">Email Tolu</a>
+            <a class="btn btn-ghost" href="https://github.com/ToXMon" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer>
-      <p>© <span id="year"></span> Tolu Shekoni. Crafted for clarity, motion, and impact.</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>

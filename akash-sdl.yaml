@@ -1,0 +1,35 @@
+version: "2.0"
+
+services:
+  web:
+    image: ghcr.io/toxmon/agent-workflows:latest
+    expose:
+      - port: 80
+        as: 80
+        to:
+          - global: true
+        accept:
+          - tolu.is-a.dev
+
+profiles:
+  compute:
+    web:
+      resources:
+        cpu:
+          units: 0.25
+        memory:
+          size: 128Mi
+        storage:
+          size: 512Mi
+  placement:
+    akash:
+      pricing:
+        web:
+          denom: uact
+          amount: 100
+
+deployment:
+  web:
+    akash:
+      profile: web
+      count: 1

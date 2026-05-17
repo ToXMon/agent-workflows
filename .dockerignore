@@ -1,0 +1,8 @@
+.git
+.gitignore
+.mailmap
+README.md
+Dockerfile
+.dockerignore
+*.md
+.github

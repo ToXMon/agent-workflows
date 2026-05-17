@@ -1,56 +1,66 @@
-# Tolu Shekoni — Portfolio Landing Page
+# agent-workflows
 
-A visually polished, GitHub-hostable single-page portfolio with a live GitHub metadata project showcase.
+Interactive Agent Gallery portfolio — Tolu's showcase for agentic systems, blockchain, and full-stack engineering.
 
-## What changed in V2
+**Live site:** [tolu.is-a.dev](https://tolu.is-a.dev)
 
-- Added a dynamic **Featured Repositories** section.
-- Portfolio now fetches live metadata from GitHub API for selected repos:
-  - `wijnaldum-eth/memevault`
-  - `wijnaldum-eth/Zero2Production`
-  - `tolu-jnj/DOT`
-  - `tolu-jnj/allornothing`
-  - `ToXMon/quickchops`
-  - `ToXMon/Tier`
-- On API failure/rate limits, page falls back to curated local card data.
+## What This Is
 
-## Contribution Map
+An interactive portfolio built as a single-page application with:
 
-| Source Account | Repo | Focus Area | Contribution Narrative |
-|---|---|---|---|
-| wijnaldum-eth | memevault | Hackathon / Web3 | Rapid onchain product experimentation and UX iteration |
-| wijnaldum-eth | Zero2Production | Systems / Backend | Production-oriented implementation and architecture growth |
-| tolu-jnj | DOT | Utility / Data | Practical utility build with disciplined execution |
-| tolu-jnj | allornothing | Hackathon / Full Stack | Constraint-driven shipping and end-to-end delivery |
-| ToXMon | quickchops | Product Experiment | Fast product iteration with clean UX focus |
-| ToXMon | Tier | Systems / Automation | Structured system design and repeatable build patterns |
+- **5 flagship exhibits** — Crypto Scanner, X Monitor, AgentTrust, Memory Palace, Agent Skills
+- **Interactive demo panel** — Pre-recorded JSON payloads for each exhibit
+- **3D motion** — Animated canvas background with floating orbs and particle network
+- **Ryan Luo-inspired design** — Dark theme, blur-card system, scroll-driven reveals
+- **Zero dependencies** — Plain HTML, CSS, and JavaScript for fast load and easy deploy
 
-## Local preview
-
-Open `index.html` directly in your browser, or run:
+## Quick Start
 
 ```bash
-cd tolu-portfolio
+# Serve locally
 python3 -m http.server 8080
+# Open http://localhost:8080
+
+# Or use Docker
+docker build -t agent-gallery .
+docker run -p 8080:80 agent-gallery
 ```
 
-Then visit `http://localhost:8080`.
+## Deploy to Akash
 
-## Deploy to GitHub Pages
+```bash
+# Build and push to GHCR
+docker build -t ghcr.io/toxmon/agent-workflows:latest .
+docker push ghcr.io/toxmon/agent-workflows:latest
 
-1. Create a repo (example: `tolu-portfolio`).
-2. Push these files to the repo root.
-3. In GitHub: **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main** (root)
-5. Save.
-6. Your site will be live at:
-   - `https://<your-username>.github.io/tolu-portfolio/`
+# Deploy using Akash SDL
+provider-services tx deployment create akash-sdl.yaml --from wallet
+```
 
-## Quick customization
+## Tech Stack
 
-- Change email: `index.html` search `hello@tolushekoni.com`
-- Change GitHub link: `index.html` search `https://github.com/ToXMon`
-- Update project list: edit `projectSpecs` in `script.js`
-- Color palette: edit CSS variables in `styles.css` under `:root`
+| Layer | Choice |
+|-------|--------|
+| Runtime | Vanilla HTML/CSS/JS |
+| Server | nginx:1.25.3-alpine |
+| Container | Docker |
+| Hosting | Akash Network (decentralized cloud) |
+| Registry | GitHub Container Registry (GHCR) |
+| DNS | is-a.dev subdomain |
+
+## File Structure
+
+```
+├── index.html      # Main page with all sections
+├── script.js       # Demo data, scroll reveals, canvas animation
+├── styles.css      # Design system, layout, animations
+├── Dockerfile      # nginx container
+├── nginx.conf      # Security headers, caching, routing
+├── akash-sdl.yaml  # Akash deployment config
+├── CHANGELOG.md
+└── README.md
+```
+
+## License
+
+MIT
