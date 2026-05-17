@@ -2,7 +2,7 @@ version: "2.0"
 
 services:
   web:
-    image: ghcr.io/toxmon/agent-workflows:0.1.0
+    image: ghcr.io/toxmon/agent-workflows:latest
     expose:
       - port: 80
         as: 80
