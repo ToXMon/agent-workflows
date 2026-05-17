@@ -9,7 +9,7 @@ services:
         to:
           - global: true
         accept:
-          - tolu.is-a.dev
+          - localhost
 
 profiles:
   compute:

@@ -15,4 +15,4 @@
 ### Changed
 - Complete rewrite from static business portfolio to interactive agent gallery
 - Repositioned from "Materialist Scientist" to "Cracked Full-Stack Developer"
-- Updated branding to tolu.is-a.dev
+- Updated branding to Agent Gallery portfolio

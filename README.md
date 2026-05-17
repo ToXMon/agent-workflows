@@ -2,7 +2,7 @@
 
 Interactive Agent Gallery portfolio — Tolu's showcase for agentic systems, blockchain, and full-stack engineering.
 
-**Live site:** [tolu.is-a.dev](https://tolu.is-a.dev)
+**Live site:** [toxmon.github.io/agent-workflows](https://toxmon.github.io/agent-workflows/)
 
 ## What This Is
 
@@ -46,7 +46,7 @@ provider-services tx deployment create akash-sdl.yaml --from wallet
 | Container | Docker |
 | Hosting | Akash Network (decentralized cloud) |
 | Registry | GitHub Container Registry (GHCR) |
-| DNS | is-a.dev subdomain |
+| DNS | GitHub Pages |
 
 ## File Structure
 
